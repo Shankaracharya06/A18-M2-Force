@@ -264,8 +264,26 @@ elif side1 == side2 or side1 == side3 or side2 == side3:
     print("Isosceles Traingle")
 else:
     print("Scalene Traingle")
+    
 #Accept the number of days from the user and calculate the charge of library according to the following criteria. Till five days it is ₹2 per day, 6 to 10 days it is ₹3 per day, 11 to 15 days it is ₹4.00 per day and after 15 days it is five Rupees per day.
-
+number_of_days = int(input("Enter number  of days:"))
+if number_of_days <= 5:
+    charge = 5
+    total_charge = number_of_days * 5
+    print(total_charge)
+elif 5 < number_of_days <= 10:
+    charge = 4
+    total_charge = number_of_days * 4
+    print(total_charge)
+elif 10 < number_of_days <=15:
+    charge = 3
+    total_charge = number_of_days * 3
+    print(total_charge)
+else:
+    charge = 2
+    total_charge = number_of_days * 2
+    print(total_charge)
+    
 #Accept the kilometers covered and calculate the bill according to the following criteria. For 1st 10 kilometers it is ₹11.00 per kilometer, For next 90 kilometers it is rupees 10 per kilometer and after that it is ₹9 per kilometer.
 distance = float(input("Enter kilometers covered:"))
 if distance <= 10:
@@ -277,6 +295,7 @@ elif distance <= 100:
 else:
     bill = distance * 9
     print(f"The bill is:{bill}")
+    
 #WAP to convert temperature from celsius to kelvin and kelvin to celsius using the elif statement.
 option = input("Choose the option from below\nA:Celsius to Kelvin\nB:Kelvin to Celsius\nEnter your option here:")
 if option=='A':
