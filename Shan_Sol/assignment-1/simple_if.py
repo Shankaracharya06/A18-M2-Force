@@ -1,4 +1,3 @@
-'''
 #Write a program To register for a company only if job location is Bangalore
 location=input("Enter the location of job:")
 if location == 'Bangalore':
@@ -119,5 +118,3 @@ if data_type in [str,list,tuple,set,dict]:
 num = int(input("Enter any number:"))
 if 0 <= num <= 9:
     print("num is single digit")
-
-'''
