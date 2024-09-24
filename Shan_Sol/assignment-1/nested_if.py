@@ -66,14 +66,12 @@ if len(heterogeneous_tuple) % 2 == 1:
         print("middle value is not a string")
 else:
     print("tuple has no middle value")
-
-#########################################################################################################################
+    
 #Write a program.To check the greater among four numbers using nested if.
-num1 = eval(input("Enter num1:"))
-num2 = eval(input("Enter num2:"))
-num3 = eval(input("Enter num3:"))
-num4 = eval(input("Enter num4:"))
-
+num1 = float(input("Enter num1:"))
+num2 = float(input("Enter num2:"))
+num3 = float(input("Enter num3:"))
+num4 = float(input("Enter num4:"))
 if num1 > num2:
     if num1 > num3:
         if num1 > num4:
@@ -81,22 +79,74 @@ if num1 > num2:
         else:
             print("num4 is greater")
     else:
-        if num3 > num2:
-            if num3 > num4:
-                print("num3 is greater")
-            else:
-                print("num4 is greater")
+        print("num3 is greater")
 else:
     if num2 > num3:
-        print()
-    else:
-        if num3 > num4:
-            print()
+        if num2 > num4:
+            print("num2 is greater")
         else:
             print("num4 is greater")
-''''''
-#######################################################################################################################
+    else:
+        print("num3 is greater")
+
 #Write a program to find the second greatest among four numbers.
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+num3 = float(input("Enter third number: "))
+num4 = float(input("Enter fourth number: "))
+if num1 > num2:
+    if num1 > num3:
+        if num1 > num4:
+            greatest = num1
+        else:
+            greatest = num4
+    elif num3 > num4:
+        greatest = num3
+    else:
+        greatest = num4
+else:
+    if num2 > num3:
+        if num2 > num4:
+            greatest = num2
+        else:
+            greatest = num4
+    elif num3 > num4:
+        greatest = num3
+    else:
+        greatest = num4
+
+################################ Now find the second greatest by checking numbers other than the greatest  ################################################
+if greatest == num1:
+    if num2 > num3 and num2 > num4:
+        second_greatest = num2
+    elif num3 > num4:
+        second_greatest = num3
+    else:
+        second_greatest = num4
+elif greatest == num2:
+    if num1 > num3 and num1 > num4:
+        second_greatest = num1
+    elif num3 > num4:
+        second_greatest = num3
+    else:
+        second_greatest = num4
+elif greatest == num3:
+    if num1 > num2 and num1 > num4:
+        second_greatest = num1
+    elif num2 > num4:
+        second_greatest = num2
+    else:
+        second_greatest = num4
+else:
+    if num1 > num2 and num1 > num3:
+        second_greatest = num1
+    elif num2 > num3:
+        second_greatest = num2
+    else:
+        second_greatest = num3
+        
+print(f"The second greatest number is: {second_greatest}")
+
 #Write a program To check the type of a given character.
 character = input("Enter any character:")
 if character.isupper():
@@ -109,7 +159,7 @@ else:
             print("character is numeric")
         else:
             print("character is special char")
-    
+            
 #Write a program to consider an integer number. Print happy if the number is divisible by two. Print SAD if the number is divisible by 5 and print square of the numbers only if it is divisible by seven else print the number as it is.
 num = int(input("Enter an integer:"))
 if num % 2 == 0:
@@ -176,12 +226,12 @@ if character.isalpha():
 else:
     print("Character is not an alphabet")
     
-####################################################
 #Write a program to print the length of given data only if it is even.
 data = eval(input("Enter data:"))
 if len(data) % 2 == 0:
     print(len(data))
-######################################################
+else:
+    print("Length of given data is not even")
     
 #Write a program to check greatest among three numbers using nested if.
 num1 = eval(input("Enter num1:"))
@@ -219,9 +269,7 @@ else:
 # Adults (18+): $12 (except for Tuesdays: $10)
 # Children (under 18): $8 (except for Tuesdays: $6)
 # Seniors (65+): $8 (always)
-
 age = int(input("Enter your age:"))
-
 if 18 < age <= 65:
     day_of_week = input("Enter day of week:")
     if day_of_week != 'tuesday':
