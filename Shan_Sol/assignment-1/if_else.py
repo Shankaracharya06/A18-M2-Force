@@ -1,4 +1,3 @@
-'''
 #Uni whether the first value present inside the given list is complex or not.
 list_ = eval(input("Enter a list:"))
 first_value = list_[0]
