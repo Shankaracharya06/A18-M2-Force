@@ -304,17 +304,41 @@ if product_code in product_credentials:
         print("insufficient funds")
 else:
     print("invalid code")
-    '''
+    
 #Restaurant Discount: Write a program that calculates a restaurant bill with a discount based on the day of the week and party size:
 #Weekdays (Mon-Fri), party < 4: No discount.
 #Weekdays (Mon-Fri), party >= 4: 10% discount.
 #Weekends (Sat-Sun), any party size: 15% discount.
+bill = float(input("Enter the bill:"))
+day = input("Enter day of the week:")
+
+if day in ['Mon','Tue','Wed','Thu','Fri'] :
+    party_size = int(input("Enter the party size:"))
+    if party_size < 4:
+        print("No discount")
+        print(bill)
+    else:
+        bill -= (10/100) * bill
+        print(bill)
+else:
+    bill -= (15/100) * bill
+    print(bill)
 
 #Shape Identifier: Design a program that takes two inputs (length1, length2) and identifies the geometric shape based on the values:
 #If lengths are equal: Square
 #If one length is twice the other: Rectangle
-#Otherwise: Not a square or rectangle
+#Otherwise: Not a square or rectangle.
+length1 = float(input("Enter length1:"))
+length2 = float(input("Enter length2:"))
 
+if length1 == length2:
+    print("Square")
+else:
+    if length1 == (2 * length2) or length2 == (2 * length1):
+        print("Rectangle")
+    else:
+        print("Not a Square or Rectangle")
+        
 #WAP to check the type of a triangle (Equilateral,isosceles,scalene) using nested -if
 
 #Wap to accept any number from 1 to 5 and display that number in word form. if they enter more than 5 then print no match.
