@@ -340,11 +340,66 @@ else:
         print("Not a Square or Rectangle")
         
 #WAP to check the type of a triangle (Equilateral,isosceles,scalene) using nested -if
-
+side1 = int(input("Enter side1:"))
+side2 = int(input("Enter side2:"))
+side3 = int(input("Enter side3:"))
+if side1 == side2:
+    if side1 == side3:
+        print("Equilateral Traingle")
+    else:
+        print("isosceles traingle")
+else:
+    if side2 == side3:
+        print("isoceles traingle")
+    else:
+        print("scalene traingle")
+        
 #Wap to accept any number from 1 to 5 and display that number in word form. if they enter more than 5 then print no match.
+num = int(input("Enter number from 1 to 5:"))
+if 1 <= num <= 5:
+    if num == 1:
+        print("One")
+    elif num == 2:
+        print("Two")
+    elif num == 3:
+        print("Three")
+    elif num == 4:
+        print("Four")
+    else:
+        print("Five")
+else:
+    print("No Match")
 
 #Wap to take input as only collections. 
 #i) if the type of input is a list then  ask the value from the user and insert it in the middle index of that list. and print that list.
 #	ii) if type of input is tuple print 'cannot append tuple is immutable'
 #	iii)if type is set, take the input from the user. if the value is immutable then only add it to the set and print the set otherwise print 'enter only immutable collection'
 #	iv) if type of input is dictionary take key and value as user input and add the key and value 	pair using syntax to add key value . and print the dictionary.
+collection = eval(input("Enter a collection:"))
+
+if type(collection) is list:
+    value = eval(input("Enter a value:"))
+    middle_index = len(collection) // 2
+    if len(collection) % 2 == 0:
+        collection.insert(middle_index,value)
+        print(collection)
+    else:
+        collection.insert(middle_index+1,value)
+        print(collection)
+        
+elif type(collection) is tuple:
+    print('cannot append tuple is immutable')
+    
+elif type(collection) is set:
+    value = eval(input("Enter a value:"))
+    if type(value) in [int,float,complex,str,tuple]:
+        collection.add(value)
+        print(collection)
+    else:
+        print('enter only immutable collection')
+        
+elif type(collection) is dict:
+        key = input("Enter anything which is of immutable data type:")
+        value =input("Enter value:")
+        collection[key] = value
+        print(collection)
