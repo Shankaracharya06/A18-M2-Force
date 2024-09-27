@@ -1,3 +1,4 @@
+# rock,paper,scissor
 options = {'Rock','Paper','Scissor'}
 Computer = 0
 Player = 0
@@ -34,6 +35,6 @@ while True:
         Player += 1
         
     options.add(comp_option)
-        
+
 print(f"Player Point:{Player}")
 print(f"Computer Point:{Computer}")
