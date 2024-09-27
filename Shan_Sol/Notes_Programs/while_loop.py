@@ -1,4 +1,4 @@
-'''#WAP to print 'python' 5 timnes using while loop
+#WAP to print 'python' 5 timnes using while loop
 count = 1
 while count <= 5:
     print("python")
@@ -153,18 +153,134 @@ while index_list < len(list_):
         if rev == element:
             palindrome.append(element)
 print(palindrome)
-'''
+
 #WAP to mimic replace function(method) in string.
+line="if you are bad i will be mad"        #output"if_you_are_bad_i_will_be_mad"
+index = 0
+string =''
+while index < len(line):
+    char = line[index]
+    index += 1
+    if char != ' ':               #char is not equal to space,just add the char as it is
+        string += char
+    else:                          
+        string += '_'             #char is space i want to replace space with underscore
+print(string)
 
 #WAP to mimic string swapcase method.
+string = input("Enter an string")
+index = 0
+output = ''
+while index < len(string):
+    char = string[index]
+    index += 1
+    if 'a' <= char <= 'z':
+        ascii = ord(char)         #to know the ascii value of a char we use ord function
+        ascii -= 32               #in between the ASCII value of uppercase and lowercase there is difference of 32(A=65,a=97)
+        char =chr(ascii)          #to know the character of an ascii value we use chr function
+        output += char
+    else:
+        if 'A' <= char <= 'Z':
+            ascii = ord(char)
+            ascii += 32
+            char += chr(ascii)
+            output += char
+print(output)
+
 #WAP to mimic string isalpha method.
+string = input("Enter an string:")
+index = 0
+isalpha = True
+while index < len(string):
+    char = string[index]
+    index += 1
+    if not ('A' <= char <='Z' or 'a' <= char <= 'z'):   #if char not in between A-Z or a-z means char is either numeric or special char
+        isalpha =  False                                #so make isalpha False
+        break                                           #to come out from the loop we use break
+print(isalpha)
 #WAP to mimic string upper method.
+string = input("Enter a string:")
+index = 0
+output = ''
+while index < len(string):
+    char = string[index]
+    index += 1
+    if 'a' <= char <= 'z':
+        ascii = ord(char)
+        ascii -= 32
+        char = chr(ascii)
+        output += char
+    else:
+        output += char
+print(output)
 #WAP to mimic string lower method.
+string = input("Enter a string:")
+index = 0
+output = ''
+while index < len(string):
+    char = string[index]
+    index += 1
+    if 'A' <= char <= 'Z':
+        ascii = ord(char)
+        ascii += 32
+        char = chr(ascii)
+        output += char
+    else:
+        output += char
+print(output)
 #WAP to mimic string isnumeric method.
+string = input("Enter an string:")
+index = 0
+isnumeric = True
+while index < len(string):
+    char = string[index]
+    index += 1
+    if not ('0' <= char <='9'):   #if char not in between 0-9 means char is either alphabet or special char
+        isnumeric =  False        #so make isnumeric False
+        break                     #to come out from the loop we use break
+print(isnumeric)
+
 #WAP to mimic string isupper method.
+string = input("Enter an string:")
+index = 0
+isupper = True
+while index < len(string):
+    char = string[index]
+    index += 1
+    if not ('A' <= char <='Z'):   #if char not in between A-Z char is either lowercase or numeric or special char
+        isupper =  False          #so make isupper False
+        break                     #to come out from the loop we use break
+print(isupper)
+
 #WAP to mimic string islower method.
+string = input("Enter an string:")
+index = 0
+islower = True
+while index < len(string):
+    char = string[index]
+    index += 1
+    if not ('a' <= char <= 'z'):   #if char not in between a-z means char is either uppercase or numeric or special char
+        islower =  False           #so make islower False
+        break                      #to come out from the loop we use break
+print(islower)
+
 #WAP to display a dictionary where the keys are the characters in a string and its value will be its ASCII value.
+string = "hey shan how are you"
+index = 0
+output = {}
+while index < len(string):
+    char = string[index]
+    index += 1
+    if char not in output:
+        output[char] = ord(char)
+print(output)
+
 #WAP to display a dictionary,where the keys are the characters of the string and the values are its number of occurences.
+string = "dont trouble the trouble"
+index = 0
+output = {}
+while index < len(string):
+
 #WAP to display a dictionary whose keys are words of a sentence and its values are length of each word.
 #WAP to categorized all the file nbames with respect to its extensions.
 # given (files=['start.py','demo.txt','hello.py','new.py','bte.txt','same.csv'])
