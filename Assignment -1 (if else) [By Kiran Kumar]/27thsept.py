@@ -68,3 +68,42 @@ else:
         print("Isosceles Triangle")
     else:
         print("Scalene Triangle")
+        
+        
+        
+# Question - 100
+# Wap to accept any number from 1 to 5 and display that number in word form. if they enter more than 5 then print no match.
+
+
+number = int(input("Enter any number between 1 to 5"))
+match number:
+    case 1:
+        print("One")
+    case 2:
+        print("Two")
+    case 3:
+        print("Three")
+    case 4:
+        print("Four")
+    case 5:
+        print("Five")
+    case _ :
+        if number > 5:
+            print("No Match")
+        else:
+            print("Invalid Number, Enter number in between 1 to 5")
+            
+            
+    
+    
+    
+
+
+# Question - 89
+# Write a program to print middle Character.Given string only if it is upper case character.
+
+given_string = input("Enter any string : ") # kiran
+if given_string.isupper():
+    middle = len(given_string) // 2
+    # print(middle)  - for validation
+    print(given_string[middle])
