@@ -276,11 +276,42 @@ while index < len(string):
 print(output)
 
 #WAP to display a dictionary,where the keys are the characters of the string and the values are its number of occurences.
-string = "dont trouble the trouble"
+string = "aaabcdhay"
 index = 0
 output = {}
 while index < len(string):
+    char = string[index]       #we fetch the the each char 
+    index += 1
+    if char not in output:     #if is not present make that char as new key 
+        output[char] = 1       #and give occurence as 1 for the first time
+    else:
+        output[char] += 1      #if char is already present just increment the occurence of that char by 1
+print(output)
 
 #WAP to display a dictionary whose keys are words of a sentence and its values are length of each word.
+sentence = input("Enter a sentence:")
+words = sentence.split()         #split method,split the whole sentence as single-single words
+index = 0
+output={}
+while index < len(words):
+    word = words[index]          #take each word from the group of words
+    output[word] = len(word)     #assign the length of the word to the key named word
+    index += 1
+print(output)
+
 #WAP to categorized all the file nbames with respect to its extensions.
 # given (files=['start.py','demo.txt','hello.py','new.py','bte.txt','same.csv'])
+files=['start.py','demo.txt','hello.py','new.py','bte.txt','same.csv']
+index = 0
+output = {}
+while index < len(files):
+    item = files[index]         #take each each item from the given string
+    file = item.split('.')      #split that item from their . character
+    name = file[0]              #store the first element as name
+    ext = file[1]               #store the second element as extension
+    index += 1
+    if ext not in output:       #if extension is not present in dictionary make that extension as key
+        output[ext] = [name]    #and assign name of file to that key into a list
+    else:
+        output[ext] += [name]   #if key is already present just update the value of the list and perfrom list concatenation
+print(output)
