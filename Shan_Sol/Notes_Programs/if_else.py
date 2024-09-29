@@ -4,7 +4,7 @@ if num >= 0:
     print("It is Positive number")
 else:
     print("It is Negative number")
-
+    
 #WAP to check if the user entered alphabet is uppercase or lowercase.
 char=input("Enter a char:")
 if 'a' <= char <= 'z':
