@@ -46,7 +46,7 @@ else:
     else:
         print("num 3 is greatest")
     
-#wAP to find the smallest among three user entered integer using nested if.
+#wAP to find the smallest among three user entered integer using nested if
 num1 = int(input("Enter num1:"))
 num2 = int(input("Enter num2:"))
 num3 = int(input("Enter num3:"))
