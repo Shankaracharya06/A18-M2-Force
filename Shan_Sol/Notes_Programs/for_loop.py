@@ -73,3 +73,55 @@ if len(list_of_word) == 1:
     print(list_of_word)
 else:
     print(f"The string has more than one word whose occurences are same that is {list_of_word}")
+    
+#WAP to print n natural numbers using for loop.
+num = int(input("Enter a num:"))
+for n in range(1,num+1):   #in range function end point is always excluded so we use +1 to include that number,and
+                           #to show natural number till num entered by the user
+    print(n)
+
+#WAP to print all even numbers from 0 to 100.
+for num in range(0,101,2):
+    print(num,end=",")
+
+#WAP to print multiplication table of a given number.
+number = int(input("Enter a num:"))
+for factor in range(1,11):
+    print(f"{number} x {factor} = {number * factor}")
+
+#WAO to print odd numbers from 0 to 100 in reverse order.
+for num in range(99,0,-2):
+    print(num,end=",")
+
+#WAP to print factorial of given number using for loop.
+fact = 1
+number = int(input("Enter a num:"))
+for num in range(1,number+1):
+    fact = fact * num
+print(fact)
+
+#WAP to print fibonacci series upto n terms entred by the user.
+start = 0
+end = 1
+series = [0,1]
+n_terms = int(input("Enter n:"))
+if n_terms == 1:
+    print(start)
+else:
+    for _ in range(n_terms-2):
+        item = series[start] + series[end]
+        start +=1
+        end += 1
+        series.append(item)
+    
+    print(series)
+
+###################################### one more optimized solution of fibonacci series ####################################
+n_terms = int(input("Enter n:"))
+series = [0,1]
+if n_terms == 1:
+    print(series[0])
+else:
+    for _ in range(n_terms-2):
+        series.append(series[-1] + series[-2])
+    print(series)
