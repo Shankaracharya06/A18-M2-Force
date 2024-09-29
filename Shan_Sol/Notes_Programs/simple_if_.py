@@ -3,7 +3,7 @@ num=int(input("Enter a number:"))
 if num % 2 == 0:
     print(f"{num} is even")
 
-#WAP to check if an alphabet is an vowel
+#WAP to check if an alphabet is an vowel.
 alphabet=input("Enter an alphabet:")
 if alphabet in "aeiouAEIOU":
     print(f"{alphabet} is vowel")
