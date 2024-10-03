@@ -108,6 +108,116 @@ for item in collection:
     sum = sum + item 
 # print(sum, length)
 print("The Average of Collection is ",sum/length)
+
+
+
+
+# Ask user a word, Check keyword or not
+
+word = input("Enter a word :")
+import keyword
+# print(keyword.kwlist) - to see the list of all keywords
+if word in keyword.kwlist:
+    print("It's a Keyword")
+else:
+    print("Not a Keyword")
+
+
+
+# First Character is Uppercase or Not 
+
+word = input("Enter a word :")
+first_character = word[0]
+if first_character.isupper():
+    print("First Character is Uppercase")
+else:
+    print("First Character is not Uppercase")
+
+
+
+# Last Character is Uppercase or Not 
+word = input("Enter a word :")
+last_character = word[-1]
+if last_character.isupper():
+    print("Last Character is Uppercase")
+else:
+    print("Last Character is not Uppercase")
     
 
+# Middle Character is Uppercase or Not 
+word = input("Enter a word :")
+middle_character = word[len(word)//2] 
+if middle_character.isupper():
+    print("Middle Character is in Uppercase")
+else:
+    print("Middle Character is not in Uppercase")
+
+    
+
+
+
+# First Character is Lowercase or Not 
+word = input("Enter a word :")
+first_character = word[0]
+if word.islower():
+    print("First Character is in Lowercase")
+else:
+    print("First Character is not in Lowercase")
+
+
+
+# Last Character is Lowercase or Not 
+word = input("Enter a word: ")
+last_character = word[-1]
+if last_character.islower():
+    print("Last Character is in Lowercase")
+else:
+    print("Last Character is not in Lowercase")
+    
+    
+
+
+
+# Middle Character is Lowercase or Not 
+word = input("Enter a word :")
+middle_character = word[len(word)//2]
+if middle_character.islower():
+    print("Middle Characters is in Lowercase")
+else:
+    print("Middle Character is not in Lowercase")
+    
+    
+    
+# All Characters are in Uppercase or Not
+word = input("Enter a word : ")
+if word.isupper():
+    print("All Characters are in Uppercase")
+else:
+    print("All Characters are not in Uppercase")
+    
+
+# All Characters are in Lowercase or Not
+word = input("Enter a word :")
+if word.islower():
+    print("All Characters are in Lowercase")
+else:
+    print("All Characters are not in Lowercase")
+    
+# Number is Positive, Negative or Zero
+number = int(input("Enter a number : "))
+if number > 0:
+    print("Positive Number")
+elif number < 0 :
+    print("Negative Number")
+else:
+    print("Zero Number")
+    
+    
+# Print Pass or Fail
+marks = float(input("Enter your marks :")) # Assming user will enter marks in between 0 to 100
+if marks>33:
+    print("Pass")
+else:
+    print("Fail")
+    
 
