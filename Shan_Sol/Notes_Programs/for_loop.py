@@ -124,4 +124,4 @@ if n_terms == 1:
 else:
     for _ in range(n_terms-2):
         series.append(series[-1] + series[-2])
-    print(series)
+    print(series)           
